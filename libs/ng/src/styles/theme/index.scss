@@ -1,0 +1,27 @@
+@import './dark';
+@import './light';
+
+.text-primary {
+  color: var(--primary-text-color) !important;
+}
+
+.bg-primary {
+  color: var(--primary-text-color) !important;
+  background-color: var(--primary-color) !important;
+}
+
+.text-color {
+  color: var(--text-color) !important;
+}
+
+.text-color-secondary {
+  color: var(--text-secondary-color) !important;
+}
+
+.ground-background {
+  background-color: var(--ground-background) !important;
+}
+
+.card-background {
+  background-color: var(--card-background) !important;
+}

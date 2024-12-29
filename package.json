@@ -2,7 +2,10 @@
   "name": "@levons/source",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "serve:admin": "npx nx serve admin --port 23412 --host admin.dev.levons.cn",
+    "serve:site": "npx nx serve site --port 23411 --host site.dev.levons.cn"
+  },
   "private": true,
   "dependencies": {
     "@angular/animations": "~19.0.0",
@@ -13,7 +16,10 @@
     "@angular/platform-browser": "~19.0.0",
     "@angular/platform-browser-dynamic": "~19.0.0",
     "@angular/router": "~19.0.0",
+    "@primeng/themes": "^19.0.2",
+    "primeng": "^19.0.2",
     "rxjs": "~7.8.0",
+    "tailwindcss-primeui": "^0.3.4",
     "zone.js": "~0.15.0"
   },
   "devDependencies": {

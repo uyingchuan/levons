@@ -1,0 +1,25 @@
+.layout-container {
+  flex-grow: 1;
+  margin: 0 auto;
+  padding-top: 3.25rem;
+  position: relative;
+  width: 100%;
+}
+
+@media (min-width: 1024px) {
+  .layout-container {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1216px) {
+  .layout-container {
+    max-width: 1152px;
+  }
+}
+
+@media (min-width: 1408px) {
+  .layout-container {
+    max-width: 1344px;
+  }
+}
