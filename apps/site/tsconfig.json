@@ -1,32 +1,10 @@
 {
-  "compilerOptions": {
-    "target": "es2022",
-    "esModuleInterop": true,
-    "forceConsistentCasingInFileNames": true,
-    "strict": true,
-    "noImplicitOverride": true,
-    "noPropertyAccessFromIndexSignature": true,
-    "noImplicitReturns": true,
-    "noFallthroughCasesInSwitch": true
-  },
   "files": [],
-  "include": [],
+  "include": [".nuxt/nuxt.d.ts"],
   "references": [
     {
-      "path": "./tsconfig.editor.json"
-    },
-    {
       "path": "./tsconfig.app.json"
-    },
-    {
-      "path": "./tsconfig.spec.json"
     }
   ],
-  "extends": "../../tsconfig.base.json",
-  "angularCompilerOptions": {
-    "enableI18nLegacyMessageIdFormat": false,
-    "strictInjectionParameters": true,
-    "strictInputAccessModifiers": true,
-    "strictTemplates": true
-  }
+  "extends": "../../tsconfig.base.json"
 }

@@ -1,34 +1,29 @@
-const nx = require('@nx/eslint-plugin');
+const { FlatCompat } = require('@eslint/eslintrc');
+const js = require('@eslint/js');
 const baseConfig = require('../../eslint.config.cjs');
+
+const compat = new FlatCompat({
+  baseDirectory: __dirname,
+  recommendedConfig: js.configs.recommended,
+});
 
 module.exports = [
   ...baseConfig,
-  ...nx.configs['flat/angular'],
-  ...nx.configs['flat/angular-template'],
   {
-    files: ['**/*.ts'],
-    rules: {
-      '@angular-eslint/directive-selector': [
-        'error',
-        {
-          type: 'attribute',
-          prefix: 'app',
-          style: 'camelCase',
-        },
-      ],
-      '@angular-eslint/component-selector': [
-        'error',
-        {
-          type: 'element',
-          prefix: 'app',
-          style: 'kebab-case',
-        },
-      ],
+    files: ['**/*.ts', '**/*.tsx', '**/*.js', '**/*.jsx', '**/*.vue'],
+    // Override or add rules here
+    rules: {},
+  },
+  ...compat.extends('@nuxt/eslint-config'),
+  {
+    files: ['**/*.vue'],
+    languageOptions: {
+      parserOptions: {
+        parser: require('@typescript-eslint/parser'),
+      },
     },
   },
   {
-    files: ['**/*.html'],
-    // Override or add rules here
-    rules: {},
+    ignores: ['.nuxt/**', '.output/**', 'node_modules'],
   },
 ];

@@ -1,6 +1,2 @@
-@import 'core/index';
-@import 'theme/index';
-
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@forward 'core/index';
+@forward 'theme/index';

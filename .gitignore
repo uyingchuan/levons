@@ -42,3 +42,10 @@ Thumbs.db
 .nx/workspace-data
 
 .angular
+
+# Nuxt dev/build outputs
+.output
+.data
+.nuxt
+.nitro
+.cache

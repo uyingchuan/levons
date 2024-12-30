@@ -1,3 +1,7 @@
-@forward "libs/ng/src/styles/index.scss";
+@use "libs/ng/src/styles/index.scss";
 
-@forward "app/styles/style";
+@use "app/styles/style";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
