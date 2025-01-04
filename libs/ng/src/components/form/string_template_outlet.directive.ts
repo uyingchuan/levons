@@ -13,7 +13,7 @@ import {
   TemplateRef,
   ViewContainerRef,
 } from '@angular/core';
-import { SafeAny } from '../../interfaces/global';
+import { SafeAny } from '@levons/common';
 
 @Directive({
   selector: '[libStringTemplateOutlet]',
@@ -53,7 +53,7 @@ export class StringTemplateOutletDirective<_T = unknown> implements OnChanges {
     const newCtx = isTemplateRef
       ? this.libStringTemplateOutletContext
       : this.context;
-    const oldCtx = this.embeddedViewRef!.context as SafeAny;
+    const oldCtx = this.embeddedViewRef?.context as SafeAny;
     if (newCtx) {
       for (const propName of Object.keys(newCtx)) {
         oldCtx[propName] = newCtx[propName];

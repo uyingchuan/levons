@@ -6,6 +6,11 @@
     "declarationMap": true,
     "inlineSources": true,
     "types": [],
+    "paths": {
+      "@levons/common": [
+        "libs/common/src/index.ts"
+      ]
+    }
   },
   "exclude": [
     "jest.config.ts"

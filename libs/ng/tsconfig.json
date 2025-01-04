@@ -1,6 +1,5 @@
 {
   "compilerOptions": {
-    "baseUrl": "./src",
     "target": "es2022",
     "forceConsistentCasingInFileNames": true,
     "strict": true,

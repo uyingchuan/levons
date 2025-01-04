@@ -1,17 +1,25 @@
 {
   "extends": "./tsconfig.json",
   "compilerOptions": {
-    "baseUrl": "./src",
+    "baseUrl": "./.",
     "composite": true,
     "paths": {
+      "@levons/common": [
+        "../../libs/common/src/index.ts"
+      ],
+      "@levons/ng": [
+        "../../libs/ng/src/index.ts"
+      ],
       "@utils/*": [
-        "utils/*"
+        "./src/utils/*"
       ]
     }
   },
   "include": [
     ".nuxt/nuxt.d.ts",
-    "src/**/*"
+    "./src/**/*",
+    "../../libs/common/src/index.ts",
+    "../../libs/ng/src/index.ts"
   ],
   "exclude": []
 }
